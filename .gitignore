@@ -1,0 +1,85 @@
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ==========================================
+# IDE & Editors
+# ==========================================
+.vscode/
+.idea/
+.windsurf/
+.DS_Store
+
+# ==========================================
+# Données & Fichiers générés
+# ==========================================
+# Dossier de données (racine uniquement, pas src/data/)
+/data/
+
+# Extensions de données
+*.parquet
+*.csv
+
+# Documents générés
+*.pdf
+
+# Images générées (garder assets statiques)
+/logs/*.png
+/reports/*.png
+
+# Archives
+*.archive
+.archive/
+.windsurfrules
+
+# ==========================================
+# Logs & Temp
+# ==========================================
+*.log
+*.log.*
+*.tmp
+*.temp
+.cache/
+
+# ==========================================
+# Secrets & Config sensibles
+# ==========================================
+.env
+.env.local
+*.secret
+
+# ==========================================
+# Streamlit
+# ==========================================
+.streamlit/
+
+# ==========================================
+# Backup files
+# ==========================================
+*_backup.py
+*.backup
+
+# ==========================================
+# Autoriser code source
+# ==========================================
+!src/data/
+!config/*.json
+!package.json

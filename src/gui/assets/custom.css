@@ -1,0 +1,119 @@
+/* Sentinel Trading - CSS Centralisé */
+/* Palette de couleurs cohérente selon Color palette (url://24) */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+/* Header principal */
+.main-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.main-header h1 {
+    color: white !important;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.main-header p {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Cartes métriques */
+.metric-card {
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.definition-box {
+    background: #e3f2fd;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--info-color);
+    margin: 1rem 0;
+}
+
+/* Onglets centrés avec Default tab (url://26) */
+.stTabs [data-baseweb="tab-list"] {
+    justify-content: center;
+    gap: 20px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: nowrap;
+    background-color: #f0f2f6;
+    border-radius: 8px 8px 0 0;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom: 3px solid var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2);
+}
+
+/* Amélioration des graphiques avec Chart column colors (url://27) */
+.plotly-graph-div {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Status indicators */
+.status-functional {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.status-development {
+    color: var(--warning-color);
+    font-weight: bold;
+}
+
+.status-error {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        font-size: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

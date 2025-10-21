@@ -1,0 +1,45 @@
+# prefect.yaml pour Sentinel42 - Déploiements persistés
+
+name: "market-system"
+prefect-version: "3.0"
+
+deployments:
+  - name: "update-model-deployment"
+    flow_name: "update_model"
+    entrypoint: "flows/flows.py:flow_update_model"
+    work_pool_name: "sentinel"
+    schedule:
+      cron: "0 8 * * *"   # Tous les jours à 8h (avant ouverture marché)
+      timezone: "Europe/Paris"
+    tags: ["model", "lstm", "update"]
+    parameters: {}
+
+  - name: "news-sentiment-deployment"
+    flow_name: "news_sentiment"
+    entrypoint: "flows/flows.py:flow_news_sentiment"
+    work_pool_name: "sentinel"
+    schedule:
+      cron: "*/4 * * * *"   # toutes les 4 min
+      timezone: "Europe/Paris"
+    tags: ["market", "news"]
+    parameters: {}
+
+  - name: "trading-deployment"
+    flow_name: "trading"
+    entrypoint: "flows/flows.py:flow_trading"
+    work_pool_name: "sentinel"
+    schedule:
+      cron: "*/15 * * * *"    # toutes les 15 min (Prix -> News -> Décision)
+      timezone: "Europe/Paris"
+    tags: ["market", "trade", "production"]
+    parameters: {}
+
+  - name: "full-system-deployment"
+    flow_name: "full_system"
+    entrypoint: "flows/flows.py:flow_full_system"
+    work_pool_name: "sentinel"
+    schedule:
+      cron: "0 */2 * * *"      # toutes les 2 heures (backup/monitoring)
+      timezone: "Europe/Paris"
+    tags: ["market", "system", "backup"]
+    parameters: {}
