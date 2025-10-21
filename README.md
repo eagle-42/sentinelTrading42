@@ -1,19 +1,6 @@
+# Sentinel42
+
 # 🏛️ Sentinel42 - Système de Trading Algorithmique TDD
-
-**Version** : 2.0  
-**Tests** : 71 tests pytest (100% passant)  
-**Couverture** : 41% (en amélioration continue)
-
-📐 **[Principes d'Architecture](docs/ARCHITECTURE_PRINCIPLES.md)** - Guide de développement (DRY, API unifiée, validation)  
-🚀 **[Démarrage Rapide](START_HERE.md)** - Guide ultra-rapide en 1 commande
-
-> **📜 LICENCE : MIT**  
-> **Copyright © 2025 Eagle42 - Projet Open Source**  
-> Licence permissive MIT - Usage libre sans restriction.
-
-Système de trading algorithmique automatisé avec ML, sentiment analysis et monitoring en temps réel.
-
----
 
 ## ⚡ **DÉMARRAGE ULTRA-RAPIDE**
 
@@ -356,18 +343,3 @@ uv run pytest --cov=src --cov-report=html
 
 Ce projet est sous **licence open source MIT** - La plus permissive et populaire.
 
-### **Liberté totale**
-- ✅ **Usage libre** : commercial, privé, académique
-- ✅ **Modification libre** : adapte comme tu veux
-- ✅ **Distribution libre** : gratuite ou payante
-- ✅ **Sous-licence** : intègre dans d'autres licences
-
-### **Seule obligation**
-- 📝 **Conserver le copyright** et texte licence dans les copies
-
-**Copyright © 2025 Eagle42 - Sentinel42**  
-Voir [LICENSE](LICENSE) pour le texte complet | Standard industrie utilisé par React, Node.js, Rails...
-
----
-
-**🎉 Sentinel42 - Trading algorithmique automatisé avec Prefect !**
